@@ -1,0 +1,15 @@
+// Quick function to maintain the console window. Call at the end of your mainline code and it will close the window on the user pressing teh escape key.
+// The user may continue to type anything else at this point and the enter key will create a new line.
+
+static void ExitProgram()
+{ 
+    // Limit window exit to escape key with a while loop
+
+    Console.WriteLine("\nPress esc to exit window:");
+
+    while (Console.ReadKey().Key != ConsoleKey.Escape){ 
+        if (Console.ReadKey().Key == ConsoleKey.Enter) {
+            Console.WriteLine();
+        } 
+    }
+}
